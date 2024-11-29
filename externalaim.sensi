@@ -1,0 +1,696 @@
+DeviceType: Android
+r.BloodstrikeLimit:1
+r.BloodstrikeVersion:2
+r.UserMSAASetting:0
+
+[/Script/Engine.RendererOverrideSettings]
+r.VSync:1
+
+[/Script/Engine.Basic]
+T.SpeedFire:1
+T.Damage:0.1
+T.AimAssist:0.1
+T.LeftHandFire:0.1
+T.CameraShake:0
+T.BulletSpeed:0.1
+T.BulletDamage:0.1
+T.HitNumEveryBodys:5
+T.Recoil:0
+
+[ScriptEngine.CharacterSettings]
+r.CharacterDiffuseScale:1
+r.CharacterDiffuseOffset:0.1
+r.CharacterDiffusePower:0.1
+r.MinScreenRadiusForEarlyZPass:0.1
+
+[AndroidDeviceProfile]
+r.BulletTrace:Value:Float0×41BC80
+
+[Script/Engine/WeaponDamageRecord]
+HitDistanceArray:{"5.0f"}
+WeaponId:0
+TotalDamage:0.1
+T.FireCount:0.1
+T.HeadShootCount:0.1
+T.BodyShootCount:5
+
+[Script/Engine/WeaponReport]
+FireCount:0.1
+HitCount:1
+TotalDamage:0.1
+HeadShootCount:0
+
+[Script/Engine/HitFlow]
+Damage:0.1
+
+[/Script/Engine.AimFlow]
+AimAssist:0.1
+AimSpeed:0.1
+AimHead:0.1
+AimBody:0.1
+HitAssist:9.0
+AimLockHead:000.1
+AimLockBody:"99%
+AimLock:0.1
+AutoAim:0.1
+AutoAimSpeed:00.1
+
+[SystemSettings]
+r.Damage:0.00001F
+r.Damage:0.00001F
+
+var lock_enemy
+var lock_enemy_check : 0
+
+func _physics_process(delta):
+
+if lock_enemy:
+    look_at(lock_enemy.translation,Vector3.UP)
+    if lock_enemy_check :: 1:
+        rotate_speed : 3
+
+[/Script/UnrealEd.CascadeOptions]
+bShowModuleDump:false
+BackgroundColor:(B:25,G:20,R:20,A:0)
+bUseSubMenus:true
+bUseSpaceBarReset:false
+bUseSpaceBarResetInLevel:true
+Empty_Background:(B:25,G:20,R:20,A:0)
+Emitter_Background:(B:25,G:20,R:20,A:0)
+Emitter_Unselected:(B:0,G:100,R:255,A:0)
+Emitter_Selected:(B:180,G:180,R:180,A:0)
+ModuleColor_General_Unselected:(B:49,G:40,R:40,A:0)
+ModuleColor_General_Selected:(B:0,G:100,R:255,A:0)
+
+[/Script/Engine.ConfigMainConfigUserEnginesetting]
++Class:(Profiles("Damage:0.1"))
++Class:(Profiles("HIT:0.1"))
++Class:(Weapon("Damage:0.1"))
++Class:(Weapon("Hit:0.1"))
++Class:(Hit("Damage:0.1"))
++Class:(Damage("hit:0.1"))
++Class:(M416("Damage:0.1"))
+ +ProfilesDamage:(Offset:("Damage:0.1"))
++ProfilesDamage:(Offset:("Damage:0.1"))
++Damage:(Profile:("Damage:0.1"))
++Damage:(Hit:("Body:0.1"))
++Damage:(Hit:("Head:0.1"))
++Damage:(Hit:("Jugdment:0.1"))
++Damage:(Hit:("Hand:0.1"))
++Damage:(Hit:("Leg:0.1"))
++Damage:(Offset:("Damage:0"))
++Damage:(Offset:("Damage:0"))
++Damage:(Offset:("Damage:0"))
++Damage:(Offset:("Damage:0"))
++Damage:(Offset:("Damage:0"))
++Hit:(Offset:("Damage:0.1"))
++Hit:(Offset:("Damage:0.1"))
++Hit:(Offset:("Damage:0.1"))
++Hit:(Offset:("Damage:0.1"))
++Damage:(Class:("Damage:0.3"))
++Damage:(Class:("Damage:0.3"))
++Hit:(Class:("Damage:0.1"))
++Hit:(Class:("Damage:0.1"))
++Hit:(Class:("Damage:0.1"))
++Hit:(Class:("Damage:0.1"))
++Hit:(Offset:("Damage:0.1"))
++Hurt:(Offset:("Damage:0.1"))
++Hurt:(Offset:("Damage:0.1"))
++Hurt:(Offset:("Damage:0.1"))
++Hurt:(Offset:("Damage:0.1x0"))
++Hurt:(Offset:("Damage:0.1x0"))
++Damage:(Offset:("Head:0x0.1"))
++Damage:(Offset:("Body:0x0.1"))
++Damage:(Offset:("Leg:0x0.1"))
++Damage:(Offset:("Hand:00x0001"))
++Hit:(Offset:("Head:00x0"))
++Hit:(Offset:("Body:0x0.1"))
++Hit:(Offset:("Leg:7.0x0"))
++Hit:(Offset:("Hand:0x7.0"))
++DamagePart:(Offset:("Head:0x0"))
++DamagePart:(Offset:("Body:0x0"))
++DecYTPart:(Offset:("Head:0x0"))
++DamagePart:(Offset:("Leg:0x0"))
++DamagePart:(Offset:("Hand:0.1x0.1"))
++HitPart:(Offset:("Head:1x1"))
++HitPart:(Offset:("Body:1x1"))
++HitPart:(Offset:("Leg:0.3x0.3"))
++HitPart:(Offset:("Hand:1x1"))
+
+ [Script/STExtraShootWeapon.STExtraWeapon.Actor.Object]
+ GetAccessoriesVRecoilFactor:990000000.0f
+ GetAccessoriesRecoveryFactor:990000000.0f
+ GetAccessoriesHRecoilFactor:990000000.0f
+ GetAccessoriesDeviationFactor:99000000.0f
+ 
+[/Script/STExtraBaseCharacter("Execute_LibUE4.so")]
+ConfigResults(86FDJ99A)
+ExecuteNumberValue("0.85938492~0.93938934", 16, false, 82883882, 0, -1,0)
+DumpGetResults(0x8790085D)
+AllExecuteValue("3", 16)
+
+[Script/Engine.STExtraSystemAim]
+UseShotVerifyEx=true
+MagicBulletFOV=3.0f
+BulletRange=3.0f
+BulletFire=MAX
+BulletSpeed=MAX
+BulletFireQuality=3.0f
+BulletFireSpeed=3.0f
+CharacterHead=1.0
+CharacterBody=0.1
+ClientPartAimAsist=MAX
+ClientHitPartJudgment=MAX
+NoRipAim=1.0
+HRecoil=3.0f
+VRecoil=3.0f
+UseShotVerifyEx=true
+accessories RecoveryFactor=true
+accessoriesHRecoilFactor=true
+accessoriesVRecoilFactor=true
++CVars=true
+
+MAX
+3.Of
+{"100%")
+Report=0
+
+[/Script/Engine.Bulletinfo]
+UseShotVerifyEx=true
+MagicBulletFOV=3.0f
+BulletRange=3.0f
+BulletFire=MAX
+BulletSpeed=MAX
+BulletFireQuality=3.0f
+BulletFireSpeed=3.0f
+CharacterHead=1.0
+CharacterBody=0.1
+ClientPartAimAsist=MAX
+ClientHitPartJudgment=MAX
+
+[/Script/Engine.AimShoot]
+MagicBullet=1.0
+HighDamage=3.0f
+AimAsist=3.0f
+Damage=3.0f
+AimBot=MAX
+UseAimBot=MAX
+Bullet Tracking=3.0f
+MagicBulletFOV=3.0f
+
+[/Script/Engine.STExtraBaseCharacter]
+CharacterHead=3.0f
+CharacterBody=1.0
+ClientPartAimAsist=999
+ClientHitPartAdjustment=999
+NoRipAim=0.0
+HRecoil=999
+VRecoil=9999
+UseShotVerifyEx=true
+MagicBulletFOV=MAX
+BulletRange=999
+BulletFire=3.9
+BulletSpeed=3.0f
+
+[/Script/Engine.Damage]
+DefaultDamage=999                   
+HitDamageInfo=999
+ShootParticleEffect=0.0
+
+[/Script/Engine.Config]
+UserQualitySetting=0
+MaterialQualityLevel=0
+ShadowQuality=0
+Shadow.MaxCSMResolution=000
+Shadow.CSM.MaxMobileCascades=1
+Shadow.DistanceScale=1
+DepthOfFieldQuality=0 RefractionQuality=1
+StaticMeshLODDistanceScale=0.8
+MapView=0.1
+GraphicsSystemSupport=0.1
+
+[SistemEngine]
+BloodStrikeMaxSupportQualityLevel=0
+BloodStrikeDeviceFPSLow=60
+BloodStrikeDeviceFPSMid=60
+BloodStrikeDeviceFPSHigh=60
+BloodStrikeDeviceFPSHDR=60
+MobileContentScaleFactor=0
+HitchThreshold=0
+IdleWhenNotForeground=0
+MaxFPS=0
+OverrideFPS=0 UnsteadyFPS=0
+BloodStrikeMSAASupport=0
+DeviceFPSLevel=6
+Mobile.EnablePost Processing=1
+MaxParticleTilePreAllocation=0
+ParticleSlackGPU=0
+TestGPUSort=0
+VisualizeGPUSimulation=0
+UserMSAASetting=0
+BloodStrikeQualityLevel=0
+BloodStrikeMaxSupportQualityLevel=0 
+UserQualitySetting=0
+MaterialQualityLevel=0
+ShadowQuality=0
+Shadow.MaxCSMResolution=000
+Shadow.CSM.MaxMobileCascades=1
+Shadow.DistanceScale=1
+DepthOfFieldQuality=0 RefractionQuality=1
+StaticMeshLODDistanceScale=0.8
+MSAACount=4.0 
+MobileMSAA=1.0
+Particle.Dynamic InstanceES2=1
+DefaultFeature. AntiAliasing=0.0
+ACESStyle=1
+BloodStrikeLimit=1
+BloodStrikeCRLRuntmieMinMem=0.0
+BloodsTrikeRenderSwitch=0
+Mobile.EarlyZPass=0
+AndroidOpenglDeleteUnused Shader=0
+StreaminMaxTempMemoryAllowed=4
+Particle.Dynamic Instance=0 
+Particle.Dynamic InstanceES3=1
+UserShadowSwitch=0
+Mobile.Scene Color Format=1.0
+UseShaderPrecompileCount=1
+ShaderCacheIsOK=2
+Mobile.SubSection Frustum Cull=1
+ShaderCacheISOK=2
+UserShadowSwitch=0
+Mobile.SceneColor Format=1.0
+BloodStrikeCRL RuntmieMinMem=0.0
+BloodStrikeRender Switch=0
+Mobile.EarlyZPass=0
+AndroidOpenglDeleteUnusedShader=0
+StreaminMaxTempMemoryAllowed=4
+grass.densityScale=0
+ParticleDynamic Instance=0
+Particle. Dynamic InstanceES3=1
+Particle. Dynamic InstanceES2=1
+landscape. SafeDistance=110
+landscape.SafeLODLevel=0
+Mobile.SubSection FrustumCull=1
+tolboxforRender Fence=0
+Delayed Focus Player PawnTime=0.01
+UseProgramBinaryCache=1
+UseShaderPrecompileCount=1
+foliage.LODDistanceScale=1.0
+foliage.MinLOD=0
+GPUCollisionDepthBounds=0
+GPUSpawnWarning Threshold=0
+MaxCPUParticlesPer Emitter=0
+AllowAsyncTick=0 AllowCulling=0
+AllowGPUSorting=0
+FreezeGPUSimulation=0
+FreezeParticleSimulation=0
+grass.densityScale=0
+landscape.SafeDistance=110
+landscape.SafeLODLevel=0
+tolboxforRender Fence=
+DelayedFocusPlayer
+PawnTime=0.01
+neNet DestroyActorMultFrame=0
+vhb.StopTickWhenNotVisiable=0
+tesAsyncLoadMeshTimer=1
+OpenGL.BindlessTexture=0
+OnenGI May SubnataSize=0
+OpenGL. RebindTextureBuffers=0
+OpenGL.SkipCompute=0 
+OpenGL.UBODirectWrite=0
+OpenGL.UBOPoolSize=0
+OpenGL.UseMapBuffer=0
+OpenGL.UseVAB=0
+OpenGL.BindlessTexture=0 
+OpenGL.MaxSubDataSize=0
+vhb.StopTickWhenNotVisiable=0
+tesAsyncLoadMeshTimer=1
+neNet DestroyActorMultFrame=0
+
+[SlateSetting]
+Slate.InvalidationAllowForceCache=0
+Slate.EnableWidgetCaching=1
+Slate.EnableLayoutCaching=1
+Slate.InvalidationAllowForceCache=0
+Slate.EnableWidgetCaching=1
+
+[Scalability Group]
+SResolutionQuality=3
+SAntiAliasingQuality=0
+SShadowQuality=0
+SPostProcessQuality=0
+SPostProcessQuality=0
+STextureQuality=5
+sEffectsSmoothQuality=15
+SEffectQuality=4
+SFoliageQuality=4
+STrueSkyQuality=5
+roundClutterQuality=6
+SIBLQualuty=0.0
+SBlood StrikeQualutyLv1=0.0
+
+[Script/Engine.STExtraSystemGraphicsQuality]
+Particle.Dynamic Instance=0 
+Particle.Dynamic InstanceES3=1
+UserShadowSwitch=0
+Mobile.Scene Color Format=1.0
+UseShaderPrecompileCount=1
+ShaderCacheIsOK=2
+Mobile.SubSection Frustum Cull=1
+ShaderCacheISOK=2
+UserShadowSwitch=0
+Mobile.SceneColor Format=1.0
+BloodStrikeCRL RuntmieMinMem=0.0
+BloodStrikeRender Switch=0
+Mobile.EarlyZPass=0
+AndroidOpenglDeleteUnusedShader=0
+StreaminMaxTempMemoryAllowed=4
+grass.densityScale=0
+
+[/Script/Engine.UserInterfaceSettings]
+UIScaleRule=ShortestSide
+UIScaleCurve=(EditorCurveData=(Keys=((Time=480,Value=0.444),(Time=720,Value=0.666),(Time=1080,Value=1.0),(Time=8640,Value=8.0))),ExternalCurve=None)
+bLoadWidgetsOnDedicatedServer=True
+
+[/Script/Engine.GameEngine]
+MaxDeltaTime=0
+ServerFlushLogInterval=30
+
+[/Script/Engine.StreamingSettings]
+s.MinBulkDataSizeForAsyncLoading=131072
+s.AsyncLoadingThreadEnabled=False
+s.EventDrivenLoaderEnabled=True
+s.WarnIfTimeLimitExceeded=False
+s.TimeLimitExceededMultiplier=1.5
+s.TimeLimitExceededMinTime=0.005
+s.UseBackgroundLevelStreaming=True
+s.PriorityAsyncLoadingExtraTime=20.0
+s.LevelStreamingActorsUpdateTimeLimit = 5.0
+s.LevelStreamingComponentsRegistrationGranularity = 10
+s.UnregisterComponentsTimeLimit = 1.0
+s.LevelStreamingComponentsUnregistrationGranularity = 5
+s.MaxPackageSummarySize=16384
++FixedBootOrder=/Script/Engine/Default__SoundBase
++FixedBootOrder=/Script/Engine/Default__MaterialInterface
++FixedBootOrder=/Script/Engine/Default__DeviceProfileManager
+
+[/Script/Engine.Player]
+PlayerMovmentSpeed=99999
+PlayerSlideSpeed=99999
+
+[/Script/OnlineSubsystemUtils.IpNetDriver]
+AllowPeerConnections=False
+AllowPeerVoice=False
+ConnectionTimeout=60.0
+InitialConnectTimeout=60.0
+TimeoutMultiplierForUnoptimizedBuilds=1
+KeepAliveTime=0.2
+MaxClientRate=15000
+MaxInternetClientRate=10000
+RelevantTimeout=5.0
+SpawnPrioritySeconds=1.0
+ServerTravelPause=4.0
+NetServerMaxTickRate=30
+NetConnectionClassName="/Script/OnlineSubsystemUtils.IpConnection"
+MaxPortCountToTry=512
+
+[/Script/Engine.TextureMaps]
+NeverStreamOutTextures=False
+MinTextureResidentMipCount=0.2
+PoolSize=160
+MemoryMargin=20
+MinEvictSize=10
+MinFudgeFactor=1
+LoadMapTimeLimit=20.0
+LightmapStreamingFactor=0.2
+ShadowmapStreamingFactor=0.2
+MaxLightmapRadius=10000.0
+AllowStreamingLightmaps=True
+UseDynamicStreaming=True
+BoostPlayerTextures=3.0
+
+[/Script/UnrealEd.EditorEngine]
+LocalPlayerClassName=/Script/Engine.LocalPlayer
+GameCommandLine=-log
+AimFOVShoot=90.000000
+GodMode=True
+UseAxisIndicator=True
+MatineeCurveDetail=0.1
+HeightMapExportClassName="TerrainHeightMapExporterTextT3D"
+bGroupingActive=true
+bCustomCameraShootTracking=true
+CustomCameraBulletTracking=100.0
+bDrawSocketsInGMode=false
+bSmoothFrameRate=false
+SmoothedFrameRateRange=(LowerBound=(Type="ERangeBoundTypes::Inclusive",Value=5),UpperBound=(Type="ERangeBoundTypes::Inclusive",Value=120))
+UseOldStyleMICEditorGroups=true
+InEditorGameURLOptions=false
+
+[/Script/UnrealEd.UnrealEdEngine]
+AutoSaveIndex=0
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/Default.Default',Map="/Engine/Maps/Templates/Template_Default")
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/VR-Basic.VR-Basic',Map="/Engine/Maps/Templates/VR-Basic")
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Cross
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Cross_Mat
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/PhAT_BoneSelectedMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/PhAT_ElemSelectedMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PhAT_JointLimitMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/PhAT_NoCollisionMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/PhAT_UnselectedMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/TargetIcon
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Tick
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Tick_Mat
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetGridVertexColorMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetGridVertexColorMaterial_Ma
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetMaterial_Current
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetMaterial_X
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetMaterial_Y
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetMaterial_Z
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/WidgetVertexColorMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/LevelGridMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/TilingAAGrid
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/TilingAALineBoxFiltered
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/TilingAALineIntegral
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/ParticleSystems/PSysThumbnail_OOD
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Thumbnails/FloorPlaneMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Thumbnails/SkySphereMaterial
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMeshes/EditorCube
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMeshes/EditorCylinder
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMeshes/EditorPlane
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMeshes/EditorSkySphere
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorMeshes/EditorSphere
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/Bad
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/Bkgnd
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/BkgndHi
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/BSPVertex
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/MatInstActSprite
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/SceneManager
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/SmallFont
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Actor
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_DecalActorIcon
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_TextRenderActorIcon
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Emitter
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_ExpoHeightFog
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_KBSJoint
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_KHinge
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_KPrismatic
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_LevelSequence
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_NavP
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Note
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Player
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_RadForce
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_ReflActorIcon
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Terrain
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Thruster
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Trigger
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_VectorFieldVol
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/AI/S_NavLink
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightDirectional
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightDirectionalMove
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightError
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightPoint
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightPointMove
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightSpot
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightSpotMove
++PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/Spline/T_Loft_Spline
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/BlinkingCaret
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultBokeh
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultBloomKernel
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultDeferredDecalMaterial
+;+PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultPostProcessMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultDiffuse
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultLightFunctionMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/WorldGridMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultNormal
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultPhysicalMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultWhiteGrid
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/EditorBrushMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/Grid
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/Grid_N
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/HighResScreenshot
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/HighResScreenshotMask
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/HighResScreenshotCaptureRegion
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/LandscapeHolePhysicalMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/MiniFont
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PaperDiffuse
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PaperNormal
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PhysMat_Rubber
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PreintegratedSkinBRDF
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/RemoveSurfaceMaterial
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/WeightMapPlaceholderTexture
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/SmallFont
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/TinyFont
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/Roboto
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/RobotoTiny
+
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/Black
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/DefaultTexture
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/DefaultTextureCube
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/M_StreamingPause
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/WhiteSquareTexture
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineResources/GradientTexture0
+
+[/Script/Engine.DevOptions.Shaders]
+; See FShaderCompilingManager for documentation on what these do
+bAllowCompilingThroughWorkers=True
+bAllowAsynchronousShaderCompiling=True
+; Make sure we don't starve loading threads
+NumUnusedShaderCompilingThreads=3
+; Make sure the game has enough cores available to maintain reasonable performance
+NumUnusedShaderCompilingThreadsDuringGame=4
+; Batching multiple jobs to reduce file overhead, but not so many that latency of blocking compiles is hurt
+MaxShaderJobBatchSize=10
+bPromptToRetryFailedShaderCompiles=True
+bLogJobCompletionTimes=False
+; Only using 10ms of game thread time per frame to process async shader maps
+ProcessGameThreadTargetTime=.01
+; For regular machines, wait this many seconds before exiting an unused worker (float value)
+WorkerTimeToLive=20
+; For build machines, wait this many seconds before exiting an unused worker (float value)
+BuildWorkerTimeToLive=1200
+
+[/Script/Engine.Blueprint]
+bRecompileOnLoad=true
+
+[/Script/Engine.LevelScriptBlueprint]
+b.RecompileOnLoad=true
+
+[/Script/Engine.AnimBlueprint]
+b.RecompileOnLoad=true
+
+[CustomStats]
++LD=Streaming fudge factor
++LD=FrameTime
++LD=Terrain Smooth Time
++LD=Terrain Render Time
++LD=Terrain Triangles
++LD=Static Mesh Tris
++LD=Skel Mesh Tris
++LD=Skel Verts CPU Skin
++LD=Skel Verts GPU Skin
++LD=30+ FPS
++LD=Total CPU rendering time
++LD=Total GPU rendering time
++LD=Occluded primitives
++LD=Projected shadows
++LD=Visible static mesh elements
++LD=Visible dynamic primitives
++LD=Texture Pool Size
++LD=Physical Memory Used
++LD=Virtual Memory Used
++LD=Audio Memory Used
++LD=Texture Memory Used
++LD=360 Texture Memory Used
++LD=Animation Memory
++LD=Navigation Memory
++LD=Vertex Lighting Memory
++LD=StaticMesh Vertex Memory
++LD=StaticMesh Index Memory
++LD=SkeletalMesh Vertex Memory
++LD=SkeletalMesh Index Memory
++MEMLEAN=Virtual Memory Used
++MEMLEAN=Audio Memory Used
++MEMLEAN=Animation Memory
++MEMLEAN=Vertex Lighting Memory
++MEMLEAN=StaticMesh Vertex Memory
++MEMLEAN=StaticMesh Index Memory
++MEMLEAN=SkeletalMesh Vertex Memory
++MEMLEAN=SkeletalMesh Index Memory
++MEMLEAN=VertexShader Memory
++MEMLEAN=PixelShader Memory
++MEMLEAN=Navigation Memory
++GameThread=Async Loading Time
++GameThread=Audio Update Time
++GameThread=FrameTime
++GameThread=HUD Time
++GameThread=Input Time
++GameThread=Kismet Time
++GameThread=Move Actor Time
++GameThread=RHI Game Tick
++GameThread=RedrawViewports
++GameThread=Script time
++GameThread=Tick Time
++GameThread=Update Components Time
++GameThread=World Tick Time
++GameThread=Async Work Wait
++GameThread=PerFrameCapture
++GameThread=DynamicLightEnvComp Tick
++Mobile=ES2 Draw Calls
++Mobile=ES2 Draw Calls (UP)
++Mobile=ES2 Triangles Drawn
++Mobile=ES2 Triangles Drawn (UP)
++Mobile=ES2 Program Count
++Mobile=ES2 Program Count (PP)
++Mobile=ES2 Program Changes
++Mobile=ES2 Uniform Updates (Bytes)
++Mobile=ES2 Base Texture Binds
++Mobile=ES2 Detail Texture Binds
++Mobile=ES2 Lightmap Texture Binds
++Mobile=ES2 Environment Texture Binds
++Mobile=ES2 Bump Offset Texture Binds
++Mobile=Frustum Culled primitives
++Mobile=Statically occluded primitives
++SplitScreen=Processed primitives
++SplitScreen=Mesh draw calls
++SplitScreen=Mesh Particles
++SplitScreen=Particle Draw Calls
+
+[MemReportCommands]
+; These commands are run when memreport is executed, and output to a profile file
++Cmd="Mem FromReport"
++Cmd="LogCountedInstances"
++Cmd="obj list -alphasort"
++Cmd="rhi.DumpMemory"
++Cmd="LogOutStatLevels"
++Cmd="ListSpawnedActors"
+
+[MemReportFullCommands]
+; Additional commands to run with memreport -full
++Cmd="DumpParticleMem"
++Cmd="ConfigMem"
++Cmd="r.DumpRenderTargetPoolMemory"
++Cmd="ListTextures"
++Cmd="ListSounds -alphasort"
++Cmd="ListParticleSystems -alphasort"
++Cmd="obj list class=SoundWave -alphasort"
++Cmd="obj list class=SkeletalMesh -alphasort"
++Cmd="obj list class=StaticMesh -alphasort"
++Cmd="obj list class=Level -alphasort"
++Cmd="obj list class=StaticMeshComponent -alphasort"
+
+[/Script/Engine.AssetRegistry]
+; Fill out this list with asset registry tags that are not needed in cooked builds and will be stripped during cook.
+; You can use a * wildcard to refer to either all classes or all tags for the class.
+; If your game does not need any asset registry tags, simply add (Class=*,Tag=*). Be warned that this this may make some engine systems fail to work since they might need ParentClass or GeneratedClass on Blueprints.
++CookedTagsBlacklist=(Class=Blueprint,Tag=FiB)
++CookedTagsBlacklist=(Class=Blueprint,Tag=FiBData)
++CookedTagsBlacklist=(Class=*,Tag=AssetImportData)sort

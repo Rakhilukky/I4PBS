@@ -1,0 +1,25 @@
+[/Script/ExtremeGame.XtrmUICustomizeData]
+bIsVehicleCustomize=False
+SavedControlSetting=Control1
+WidgetCustomizePresetSettings=((Control1, (4327c0dd7d=(("Custom UI #1", (bd1a5e0c39=(("UIBP_IntegratedButtonLeftFire", (LayoutData=(Offsets=(Left=-609.634033,Top=-402.541840,Right=180.000000,Bottom=180.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000))),ZOrder=1)),("UIBP_IntegratedButtonRightFire", (LayoutData=(Offsets=(Left=-609.634033,Top=-402.541840,Right=180.000000,Bottom=180.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000))))),("UIBP_IntegratedButtonADS", (LayoutData=(Offsets=(Left=705.059509,Top=-211.321762,Right=140.000000,Bottom=140.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000)),Alignment=(X=1.000000,Y=1.000000)))))))),c56f674699="Custom UI #1",872c152b4c=(("Custom UI #1", (bd1a5e0c39=(("Button_Crouch", (LayoutData=(Offsets=(Left=-475.323059,Top=-726.001465,Right=96.000000,Bottom=96.000000),Anchors=(Minimum=(X=1.000000,Y=1.000000),Maximum=(X=1.000000,Y=1.000000)),Alignment=(X=1.000000,Y=1.000000)),Scale=(X=1.434552,Y=1.434552))),("Button_PeekRight", (LayoutData=(Offsets=(Left=-368.000000,Top=-44.000015,Right=96.000000,Bottom=96.000000),Anchors=(Minimum=(X=1.000000,Y=0.500000),Maximum=(X=1.000000,Y=0.500000)),Alignment=(X=1.000000,Y=0.000000)))),("Button_PeekLeft", (LayoutData=(Offsets=(Left=-489.023468,Top=-38.507988,Right=96.000000,Bottom=96.000000),Anchors=(Minimum=(X=1.000000,Y=0.500000),Maximum=(X=1.000000,Y=0.500000)),Alignment=(X=1.000000,Y=0.000000)))),("BP_TeamInfoCanvasWidget", (LayoutData=(Offsets=(Left=906.895325,Top=31.585001,Right=400.800018,Bottom=294.533325)))),("UIBP_IntegratedButtonLeftFire", (LayoutData=(Offsets=(Left=-609.634033,Top=-402.541840,Right=180.000000,Bottom=180.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000))),ZOrder=1)),("UIBP_IntegratedButtonRightFire", (LayoutData=(Offsets=(Left=-985.169556,Top=-394.553467,Right=180.000000,Bottom=180.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000))),Scale=(X=2.500000,Y=2.500000))),("UIBP_IntegratedButtonADS", (LayoutData=(Offsets=(Left=641.138245,Top=-353.079102,Right=140.000000,Bottom=140.000000),Anchors=(Minimum=(X=0.500000,Y=0.500000),Maximum=(X=0.500000,Y=0.500000)),Alignment=(X=1.000000,Y=1.000000)),Opacity=0.695813,Scale=(X=1.738344,Y=1.738344))))))),e4161a818c="Custom UI #1")))
+
+[/Script/Engine.STExtraBaseCharacter]
+DamageHit=9999.9f
+DamageHitBody=9999.9f
+DamageHitHead=9999.9f
+ShootRecoil=0.1
+WeaponShootBulletTracking=3.0
+AimLockHead=9999.9f
+AimAssistSpeed=9999.9f
+WeaponFireSpeed=9999.9f
+DeveloperModeAimAssist=0.1
+ShootBulletFov=9.0f
+DamageTotal=9999.9f
+
+[/Script/WeaponDamageRecord]
+TotalDamage=9999.9f
+HitDamage=9999.9f
+BodyDamage=9999.9f
+
+
+
